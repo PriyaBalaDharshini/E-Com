@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import productRoutes from './route/productRoute.js'
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(cors());
 
 app.get("/", (req, res) => res.send("Welcome to Backend"));
 
+app.use("/products", productRoutes)
 
 mongoose
     .connect(DB)
