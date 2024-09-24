@@ -1,14 +1,13 @@
-import React from 'react'
-import ProductModel from './ProductModel';
+import React from 'react';
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="border p-4 rounded-lg">
-            <img src={product.image} alt={product.title} className="h-48  w-48 object-cover mb-4" />
-            <h2 className="text-lg font-bold">{product.title}</h2>
-            <p className="text-gray-500">${product.price}</p>
+        <div className="product-card">
+            <img src={product.image} alt={product.title} />
+            <h2>{product.title}</h2>
+            <p>{product.price}</p>
         </div>
     );
-}
+};
 
-export default ProductCard
+export default ProductCard;
