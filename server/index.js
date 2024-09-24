@@ -11,7 +11,12 @@ const PORT = process.env.PORT || 8001;
 const DB = process.env.DB_URL;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://ubiquitous-capybara-58f811.netlify.app'
+}));
+app.use(cors({
+    origin: '*'
+}));
 
 app.get("/", (req, res) => res.send("Welcome to Backend"));
 
