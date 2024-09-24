@@ -13,9 +13,9 @@ const Home = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            let url = 'http://localhost:8000/products';
+            let url = 'https://e-com-7y08.onrender.com/products';
             if (category !== 'all') {
-                url = `http://localhost:8000/products/category/${category}`;
+                url = `https://e-com-7y08.onrender.com/products/category/${category}`;
             }
 
             try {
